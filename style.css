@@ -1,0 +1,15 @@
+.forca {
+height: 20px;
+width: 100px;
+margin-top: 10px;
+border: 1px solid #ccc;
+}
+.fraca {
+background-color: red;
+}
+.media {
+background-color: orange;
+}
+.forte {
+background-color: green;
+}

@@ -3,17 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Gerador de Senhas</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Gerador de Senhas</h1>
-<label><input type="checkbox" class="checkbox" checked> Letras Maiusculas</label><br>
-<label><input type="checkbox" class="checkbox"> Letras Minusculas</label><br>
-<label><input type="checkbox" class="checkbox"> Numeros</label><br>
-<label><input type="checkbox" class="checkbox"> Simbolos</label><br><br>
-<label>Tamanho da senha: <input type="number" id="tamanhoSenha" value="8" min="4"
-max="20"></label><br><br>
+<label><input type="checkbox" class="checkbox" checked> Letras Maiúsculas</label><br>
+<label><input type="checkbox" class="checkbox"> Letras Minúsculas</label><br>
+<label><input type="checkbox" class="checkbox"> Números</label><br>
+<label><input type="checkbox" class="checkbox"> Símbolos</label><br><br>
+<label>
+Tamanho da senha:
+<input type="number" id="tamanhoSenha" value="8" min="4" max="20">
+</label><br><br>
 <button onclick="geraSenha()">Gerar Senha</button><br><br>
 <input type="text" id="campoSenha" readonly>
+<h4>Força da senha:</h4>
+<div class="barra"></div>
+<div class="forca"></div>
 <script src="main.js"></script>
 </body>
 </html>

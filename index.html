@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Gerador de Senhas</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <style>
+        
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .barra { width: 200px; height: 10px; background-color: #ddd; border-radius: 5px; margin-top: 5px; overflow: hidden; }
+        .forca-barra { height: 100%; width: 0%; transition: width 0.3s, background-color 0.3s; }
+        .forca { font-weight: bold; margin-top: 5px; }
+    </style>
 </head>
 <body>
-<h1>Gerador de Senhas</h1>
-<label><input type="checkbox" class="checkbox" checked> Letras Maiúsculas</label><br>
-<label><input type="checkbox" class="checkbox"> Letras Minúsculas</label><br>
-<label><input type="checkbox" class="checkbox"> Números</label><br>
-<label><input type="checkbox" class="checkbox"> Símbolos</label><br><br>
-<label>
-Tamanho da senha:
-<input type="number" id="tamanhoSenha" value="8" min="4" max="20">
-</label><br><br>
-<button onclick="geraSenha()">Gerar Senha</button><br><br>
-<input type="text" id="campoSenha" readonly>
-<h4>Força da senha:</h4>
-<div class="barra"></div>
-<div class="forca"></div>
-<script src="main.js"></script>
+
+    <h1>Gerador de Senhas</h1>
+    
+    <label><input type="checkbox" id="maiusculas" checked> Letras Maiúsculas</label><br>
+    <label><input type="checkbox" id="minusculas"> Letras Minúsculas</label><br>
+    <label><input type="checkbox" id="numeros"> Números</label><br>
+    <label><input type="checkbox" id="simbolos"> Símbolos</label><br><br>
+
+    <label>
+        Tamanho da senha:
+        <input type="number" id="tamanhoSenha" value="8" min="4" max="20">
+    </label><br><br>
+
+    <button onclick="geraSenha()">Gerar Senha</button><br><br>
+
+    <input type="text" id="campoSenha" readonly><br><br>
+
+    <h4>Força da senha:</h4>
+    <div class="barra">
+        <div id="forcaBarra" class="forca-barra"></div>
+    </div>
+    <div id="textoForca" class="forca"></div>
+
+    <script src="main.js"></script>
 </body>
 </html>
